@@ -1,781 +1,761 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Isabel Kennedy is a creative coach and burnout prevention specialist based in Berlin. Former executive headhunter helping professionals make aligned career decisions through creative methodologies. Career coach specializing in burnout recovery and creative leadership.">
-    <meta name="keywords" content="Isabel Kennedy, creative coach, burnout coach, career coach, burnout prevention, executive coaching, Berlin coach, leadership coach, career transition, burnout recovery, creative leadership, somatic intelligence">
-    <meta name="author" content="Isabel Kennedy">
-    
-    <!-- Open Graph / Social Media -->
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="Isabel Kennedy - Creative Coach & Burnout Prevention Specialist | Berlin">
-    <meta property="og:description" content="Career coach helping professionals prevent burnout through creative methodologies. Former executive headhunter with 10,000+ hours of experience. Based in Berlin.">
-    
-    <title>Isabel Kennedy - Creative Coach & Burnout Prevention Specialist | Career Coach Berlin</title>
-    
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-CWDV6Y0D7T"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-CWDV6Y0D7T');
-    </script>
-    
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
-    
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        :root {
-            --cream: #fff8fe;
-            --dark: #333333;
-            --accent: #8B7355;
-            --highlight: #ccff00;
-            --text: #333333;
-            --white: #FFFFFF;
-        }
-        
-        body {
-            font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-            line-height: 1.6;
-            color: var(--text);
-            background: var(--cream);
-        }
-        
-        h1, h2, h3 {
-            font-family: 'Playfair Display', Georgia, serif;
-            font-weight: 400;
-            color: var(--dark);
-        }
-        
-        /* Header */
-        header {
-            background: var(--cream);
-            padding: 100px 20px 80px;
-            text-align: center;
-            border-bottom: 1px solid rgba(0,0,0,0.1);
-        }
-        
-        .header-photo {
-            width: 200px;
-            height: 200px;
-            border-radius: 50%;
-            object-fit: cover;
-            margin: 0 auto 40px;
-            display: block;
-            border: 5px solid var(--white);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-        }
-        
-        header h1 {
-            font-size: 4rem;
-            font-weight: 300;
-            margin-bottom: 20px;
-            letter-spacing: -1px;
-        }
-        
-        .tagline {
-            font-size: 1.5rem;
-            font-weight: 300;
-            color: var(--dark);
-            margin-bottom: 15px;
-        }
-        
-        .subtitle {
-            font-size: 1.1rem;
-            color: var(--accent);
-            max-width: 700px;
-            margin: 0 auto;
-        }
-        
-        /* Navigation */
-        nav {
-            background: var(--white);
-            padding: 20px;
-            text-align: center;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-        }
-        
-        nav a {
-            color: var(--dark);
-            text-decoration: none;
-            margin: 0 25px;
-            font-size: 0.95rem;
-            font-weight: 500;
-            transition: color 0.3s;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-        
-        nav a:hover {
-            color: var(--accent);
-        }
-        
-        /* Sections */
-        section {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 80px 40px;
-        }
-        
-        section h2 {
-            font-size: 2.5rem;
-            margin-bottom: 50px;
-            text-align: center;
-            font-weight: 300;
-            border-bottom: 3px solid var(--highlight);
-            padding-bottom: 15px;
-            display: inline-block;
-            width: 100%;
-        }
-        
-        /* About */
-        .about-content {
-            max-width: 800px;
-            margin: 0 auto;
-            font-size: 1.15rem;
-            line-height: 1.8;
-        }
-        
-        .about-content p {
-            margin-bottom: 25px;
-        }
-        
-        .highlight {
-            background: var(--white);
-            padding: 40px;
-            border-radius: 8px;
-            margin: 40px 0;
-            border-left: 4px solid var(--highlight);
-        }
-        
-        /* Services Grid */
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 30px;
-            margin-top: 50px;
-        }
-        
-        .service-card {
-            background: var(--white);
-            padding: 50px 40px;
-            border-radius: 12px;
-            text-align: center;
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-        
-        .service-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 40px rgba(0,0,0,0.1);
-        }
-        
-        .service-icon {
-            width: 80px;
-            height: 80px;
-            background: var(--cream);
-            border-radius: 20px;
-            margin: 0 auto 30px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 2rem;
-        }
-        
-        .service-card h3 {
-            font-size: 1.4rem;
-            margin-bottom: 20px;
-            font-weight: 400;
-        }
-        
-        .service-card p {
-            color: var(--text);
-            line-height: 1.7;
-        }
-        
-        /* Alternate Layout for Services */
-        .service-row {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 40px;
-            margin-bottom: 40px;
-            align-items: start;
-        }
-        
-        .service-block {
-            background: var(--white);
-            padding: 40px;
-            border-radius: 12px;
-        }
-        
-        .service-block h3 {
-            font-size: 1.6rem;
-            margin-bottom: 15px;
-            font-weight: 400;
-        }
-        
-        .service-block p {
-            color: var(--text);
-            line-height: 1.7;
-            font-size: 1.05rem;
-        }
-        
-        /* Press Section */
-        .press-kit {
-            background: var(--white);
-            padding: 60px;
-            border-radius: 12px;
-            margin-top: 40px;
-        }
-        
-        .press-kit h3 {
-            font-size: 1.8rem;
-            margin-bottom: 30px;
-            text-align: center;
-        }
-        
-        .press-content {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        
-        .press-bio {
-            background: var(--cream);
-            padding: 30px;
-            border-radius: 8px;
-            margin-bottom: 40px;
-            line-height: 1.8;
-        }
-        
-        .press-topics {
-            margin-top: 30px;
-        }
-        
-        .press-topics h4 {
-            margin-bottom: 20px;
-            font-size: 1.2rem;
-            color: var(--accent);
-        }
-        
-        .press-topics ul {
-            list-style: none;
-            padding: 0;
-        }
-        
-        .press-topics li {
-            padding: 12px 0;
-            border-bottom: 1px solid var(--cream);
-        }
-        
-        .press-topics li:last-child {
-            border-bottom: none;
-        }
-        
-        /* Available For Section */
-        .available-for {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 20px;
-            margin-top: 30px;
-        }
-        
-        .available-item {
-            background: var(--cream);
-            padding: 25px;
-            border-radius: 8px;
-            text-align: center;
-            font-weight: 500;
-        }
-        
-        /* Contact */
-        .contact-section {
-            text-align: center;
-            background: var(--white);
-            padding: 60px;
-            border-radius: 12px;
-        }
-        
-        /* Blog Section */
-        .blog-intro {
-            margin-bottom: 60px;
-        }
-        
-        .blog-posts {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        
-        .blog-post {
-            background: var(--white);
-            padding: 40px;
-            border-radius: 12px;
-            margin-bottom: 40px;
-            border-left: 4px solid var(--highlight);
-            transition: box-shadow 0.3s;
-        }
-        
-        .blog-post:hover {
-            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
-        }
-        
-        .post-date {
-            color: var(--accent);
-            font-size: 0.9rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-bottom: 15px;
-            font-weight: 500;
-        }
-        
-        .blog-post h3 {
-            font-size: 2rem;
-            margin-bottom: 20px;
-            color: var(--dark);
-            line-height: 1.3;
-        }
-        
-        .post-excerpt {
-            font-size: 1.15rem;
-            line-height: 1.7;
-            color: var(--text);
-            margin-bottom: 20px;
-        }
-        
-        .post-content {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.5s ease;
-        }
-        
-        .post-content.expanded {
-            max-height: 10000px;
-        }
-        
-        .post-content p {
-            margin-bottom: 20px;
-            line-height: 1.8;
-            font-size: 1.05rem;
-        }
-        
-        .read-more-btn {
-            background: var(--dark);
-            color: var(--white);
-            border: none;
-            padding: 12px 30px;
-            border-radius: 25px;
-            cursor: pointer;
-            font-size: 1rem;
-            font-weight: 500;
-            transition: background 0.3s, transform 0.2s;
-            margin-top: 20px;
-            font-family: 'DM Sans', sans-serif;
-        }
-        
-        .read-more-btn:hover {
-            background: var(--accent);
-            transform: translateY(-2px);
-        }
-        
-        .contact-button {
-            display: inline-block;
-            background: var(--dark);
-            color: var(--white);
-            padding: 18px 50px;
-            text-decoration: none;
-            border-radius: 50px;
-            font-size: 1.1rem;
-            margin: 20px 10px;
-            transition: background 0.3s, transform 0.3s;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            font-weight: 500;
-        }
-        
-        .contact-button:hover {
-            background: var(--accent);
-            transform: translateY(-2px);
-        }
-        
-        .contact-button.secondary {
-            background: var(--cream);
-            color: var(--dark);
-            border: 2px solid var(--dark);
-        }
-        
-        .contact-button.secondary:hover {
-            background: var(--dark);
-            color: var(--white);
-        }
-        
-        /* Footer */
-        footer {
-            background: var(--dark);
-            color: var(--white);
-            text-align: center;
-            padding: 40px;
-            margin-top: 80px;
-        }
-        
-        footer p {
-            opacity: 0.8;
-            font-size: 0.95rem;
-        }
-        
-        /* Responsive */
-        @media (max-width: 768px) {
-            .header-photo {
-                width: 150px;
-                height: 150px;
-                margin-bottom: 30px;
-            }
-            
-            header h1 {
-                font-size: 2.5rem;
-            }
-            
-            .tagline {
-                font-size: 1.2rem;
-            }
-            
-            .subtitle {
-                font-size: 1rem;
-            }
-            
-            section {
-                padding: 50px 20px;
-            }
-            
-            section h2 {
-                font-size: 2rem;
-            }
-            
-            nav a {
-                display: block;
-                margin: 10px 0;
-            }
-            
-            .services-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .service-row {
-                grid-template-columns: 1fr;
-            }
-            
-            .press-kit {
-                padding: 30px 20px;
-            }
-            
-            .available-for {
-                grid-template-columns: 1fr;
-            }
-        }
-        
-        /* Smooth Scroll */
-        html {
-            scroll-behavior: smooth;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Isabel Kennedy | Creative Coach & Burnout Prevention Specialist</title>
+  <meta name="description" content="Isabel Kennedy helps high-performing leaders prevent burnout before it forces them to stop — through creativity, the Kennedy Wiggle framework, and body-based intelligence. Founder of Kennedy Creative Consulting and Fishy Ceramics.">
+  <meta name="keywords" content="Isabel Kennedy, burnout prevention, creative coach, somatic leadership, executive coaching, Kennedy Wiggle, body compass, career coach UK, Kennedy Creative Consulting, Fishy Ceramics, burnout recovery, right brain leadership, leadership coach">
+  <meta name="author" content="Isabel Kennedy">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://isabelkennedy.com">
+
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://isabelkennedy.com">
+  <meta property="og:title" content="Isabel Kennedy | Creative Coach & Burnout Prevention Specialist">
+  <meta property="og:description" content="Return to yourself. I help high-performing leaders prevent burnout through creativity, the Kennedy Wiggle, and body-based intelligence.">
+  <meta property="og:image" content="https://isabelkennedy.com/isabel-kennedy.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Isabel Kennedy — Creative Coach and Burnout Prevention Specialist">
+  <meta property="og:site_name" content="Isabel Kennedy">
+  <meta property="og:locale" content="en_GB">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://isabelkennedy.com">
+  <meta name="twitter:title" content="Isabel Kennedy | Creative Coach & Burnout Prevention Specialist">
+  <meta name="twitter:description" content="Return to yourself. I help high-performing leaders prevent burnout through creativity and body-based intelligence.">
+  <meta name="twitter:image" content="https://isabelkennedy.com/isabel-kennedy.jpg">
+  <meta name="twitter:image:alt" content="Isabel Kennedy — Creative Coach and Burnout Prevention Specialist">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Isabel Kennedy",
+    "alternateName": ["Izzy Kennedy", "Isabel Gertrude Kennedy"],
+    "url": "https://isabelkennedy.com",
+    "image": "https://isabelkennedy.com/isabel-kennedy.jpg",
+    "jobTitle": "Creative Coach & Burnout Prevention Specialist",
+    "description": "Isabel Kennedy helps high-performing leaders prevent burnout through creativity, the Kennedy Wiggle framework, and body-based decision-making. Former executive headhunter with over 10,000 hours of interviewing experience in global pharma and biotech.",
+    "knowsAbout": ["Creative Coaching", "Burnout Prevention", "Somatic Leadership", "Executive Coaching", "Career Transitions", "Ceramics Workshops", "Body-Based Decision Making", "The Kennedy Wiggle", "Right-Brain Leadership"],
+    "sameAs": [
+      "https://www.linkedin.com/in/isabelgertrudekennedy",
+      "https://kennedycreativeconsulting.com",
+      "https://fishyceramics.com"
+    ],
+    "worksFor": {
+      "@type": "Organization",
+      "name": "Kennedy Creative Consulting",
+      "url": "https://kennedycreativeconsulting.com"
+    },
+    "founder": [
+      { "@type": "Organization", "name": "Kennedy Creative Consulting", "url": "https://kennedycreativeconsulting.com" },
+      { "@type": "Organization", "name": "Fishy Ceramics", "url": "https://fishyceramics.com" }
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Isabel Kennedy",
+    "url": "https://isabelkennedy.com",
+    "description": "Personal website of Isabel Kennedy — Creative Coach, Burnout Prevention Specialist, and founder of Kennedy Creative Consulting and Fishy Ceramics."
+  }
+  </script>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap');
+
+    :root {
+      --cream: #faf7f2;
+      --warm: #fff9f5;
+      --charcoal: #252525;
+      --mid: #6a6a6a;
+      --light: #e6e1da;
+      --accent: #b8a690;
+      --green: #ccff00;
+      --sage: #e8ede0;
+    }
+
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--cream);
+      color: var(--charcoal);
+      font-weight: 300;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* NAV */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      padding: 1.1rem 5vw;
+      display: flex; justify-content: space-between; align-items: center;
+      background: rgba(250,247,242,0.94);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--light);
+    }
+    .nav-logo {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.05rem; font-weight: 500;
+      letter-spacing: 0.06em; color: var(--charcoal); text-decoration: none;
+    }
+    .nav-links { display: flex; gap: 2.5rem; list-style: none; }
+    .nav-links a {
+      font-size: 0.75rem; letter-spacing: 0.14em;
+      text-transform: uppercase; color: var(--mid);
+      text-decoration: none; transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--charcoal); }
+
+    /* HERO */
+    .hero { min-height: 100vh; display: grid; grid-template-columns: 1fr 1fr; }
+    .hero-text {
+      display: flex; flex-direction: column; justify-content: center;
+      padding: 8rem 5vw 5rem 5vw;
+    }
+    .eyebrow {
+      font-size: 0.72rem; letter-spacing: 0.22em;
+      text-transform: uppercase; color: var(--accent); margin-bottom: 1.6rem;
+    }
+    h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(3.2rem, 5vw, 5.5rem);
+      font-weight: 300; line-height: 1.05; margin-bottom: 1.5rem;
+    }
+    h1 em { font-style: italic; color: var(--accent); }
+    .hero-sub {
+      font-size: 1rem; color: var(--mid);
+      max-width: 400px; line-height: 1.85; margin-bottom: 2.8rem;
+    }
+    .cta-row { display: flex; gap: 1rem; flex-wrap: wrap; }
+    .btn {
+      display: inline-block; padding: 0.85rem 2rem;
+      font-size: 0.78rem; letter-spacing: 0.1em; text-transform: uppercase;
+      text-decoration: none; transition: all 0.2s;
+      font-family: 'DM Sans', sans-serif;
+    }
+    .btn-dark { background: var(--charcoal); color: white; }
+    .btn-dark:hover { background: var(--accent); }
+    .btn-outline { border: 1px solid var(--charcoal); color: var(--charcoal); }
+    .btn-outline:hover { background: var(--charcoal); color: white; }
+    .btn-white { background: white; color: var(--charcoal); }
+    .btn-white:hover { background: var(--green); }
+    .btn-ghost { border: 1px solid rgba(255,255,255,0.35); color: white; }
+    .btn-ghost:hover { border-color: white; background: rgba(255,255,255,0.08); }
+    .hero-img {
+      position: relative; overflow: hidden; background: var(--light); min-height: 60vh;
+    }
+    .hero-img img {
+      width: 100%; height: 100%;
+      object-fit: cover; object-position: top center; display: block;
+    }
+    .hero-caption {
+      position: absolute; bottom: 1.8rem; left: 1.8rem;
+      background: rgba(250,247,242,0.92); padding: 0.8rem 1.2rem;
+      backdrop-filter: blur(4px);
+      font-size: 0.7rem; letter-spacing: 0.12em;
+      text-transform: uppercase; color: var(--mid);
+    }
+
+    /* SECTIONS */
+    .s { padding: 6rem 5vw; }
+    .label {
+      font-size: 0.68rem; letter-spacing: 0.26em;
+      text-transform: uppercase; color: var(--accent); margin-bottom: 1rem;
+    }
+    h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2rem, 3.5vw, 3.5rem);
+      font-weight: 300; line-height: 1.15; margin-bottom: 1.8rem;
+    }
+    h2 em { font-style: italic; }
+
+    /* PHILOSOPHY */
+    .philosophy { background: var(--warm); }
+    .phil-grid {
+      display: grid; grid-template-columns: 1fr 1.2fr;
+      gap: 6rem; align-items: start; margin-top: 3rem;
+    }
+    .phil-text p { font-size: 1rem; color: var(--mid); line-height: 1.9; margin-bottom: 1.4rem; }
+    .phil-text p strong { color: var(--charcoal); font-weight: 500; }
+    .phil-links { margin-top: 2.5rem; display: flex; gap: 2rem; flex-wrap: wrap; }
+    .link-a {
+      font-size: 0.78rem; letter-spacing: 0.1em; text-transform: uppercase;
+      color: var(--charcoal); text-decoration: none;
+      border-bottom: 1px solid var(--accent); padding-bottom: 2px; transition: color 0.2s;
+    }
+    .link-a:hover { color: var(--accent); }
+    .phil-right {}
+    .pull-quote {
+      border-left: 2px solid var(--accent); padding-left: 2rem; margin-bottom: 3rem;
+    }
+    .pull-quote blockquote {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(1.4rem, 2.2vw, 1.9rem);
+      font-style: italic; font-weight: 300;
+      color: var(--charcoal); line-height: 1.5;
+    }
+    .pull-quote cite {
+      display: block; margin-top: 1rem;
+      font-size: 0.72rem; letter-spacing: 0.12em;
+      text-transform: uppercase; color: var(--accent); font-style: normal;
+    }
+    .stats { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+    .stat { border-top: 1px solid var(--light); padding-top: 1rem; }
+    .stat-n { font-family: 'Cormorant Garamond', serif; font-size: 2.2rem; font-weight: 300; line-height: 1; }
+    .stat-l { font-size: 0.75rem; color: var(--mid); margin-top: 0.3rem; line-height: 1.4; }
+
+    /* WIGGLE */
+    .wiggle { background: var(--charcoal); color: white; }
+    .wiggle .label { color: rgba(255,255,255,0.4); }
+    .wiggle h2 { color: white; }
+    .wiggle-intro { max-width: 600px; color: rgba(255,255,255,0.6); font-size: 0.95rem; line-height: 1.85; margin-bottom: 3rem; }
+    .wiggle-steps {
+      display: grid; grid-template-columns: repeat(3, 1fr);
+      border: 1px solid rgba(255,255,255,0.1);
+    }
+    .w-step {
+      padding: 2.8rem 2.5rem;
+      border-right: 1px solid rgba(255,255,255,0.1);
+      transition: background 0.3s;
+    }
+    .w-step:last-child { border-right: none; }
+    .w-step:hover { background: rgba(255,255,255,0.04); }
+    .w-num {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 3rem; font-weight: 300;
+      color: rgba(255,255,255,0.1); line-height: 1; margin-bottom: 1rem;
+    }
+    .w-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.5rem; font-weight: 400; color: white; margin-bottom: 0.8rem;
+    }
+    .w-desc { font-size: 0.84rem; color: rgba(255,255,255,0.55); line-height: 1.75; }
+    .wiggle-science {
+      margin-top: 2rem; padding: 1.2rem 1.8rem;
+      border: 1px solid rgba(255,255,255,0.08);
+      display: flex; align-items: center; gap: 1.5rem; flex-wrap: wrap;
+    }
+    .wiggle-science span { font-size: 0.68rem; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(255,255,255,0.25); }
+    .wiggle-science a {
+      font-size: 0.75rem; color: rgba(255,255,255,0.45);
+      text-decoration: none; border-bottom: 1px solid rgba(255,255,255,0.15); transition: color 0.2s;
+    }
+    .wiggle-science a:hover { color: var(--green); border-color: var(--green); }
+
+    /* PROGRAMME */
+    .programme { background: var(--cream); }
+    .prog-grid {
+      display: grid; grid-template-columns: 1fr 1.4fr;
+      gap: 6rem; align-items: start; margin-top: 3rem;
+    }
+    .prog-left {}
+    .prog-left p { font-size: 1rem; color: var(--mid); line-height: 1.9; margin-bottom: 1.4rem; }
+    .prog-left p strong { color: var(--charcoal); font-weight: 500; }
+    .prog-left blockquote {
+      border-left: 2px solid var(--accent); padding-left: 1.5rem; margin: 2rem 0;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.2rem; font-style: italic; color: var(--charcoal); line-height: 1.6;
+    }
+    .prog-card {
+      border: 1px solid var(--light); padding: 3rem;
+      position: sticky; top: 7rem;
+    }
+    .prog-tag {
+      font-size: 0.68rem; letter-spacing: 0.2em;
+      text-transform: uppercase; color: var(--accent); margin-bottom: 1.5rem;
+    }
+    .prog-card h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2rem; font-weight: 400; margin-bottom: 0.5rem;
+    }
+    .prog-card .sub {
+      font-size: 0.85rem; color: var(--mid); margin-bottom: 2rem;
+      font-style: italic;
+    }
+    .prog-phases { margin-bottom: 2rem; }
+    .phase {
+      padding: 1.2rem 0; border-bottom: 1px solid var(--light);
+    }
+    .phase:last-child { border-bottom: none; }
+    .phase-label {
+      font-size: 0.68rem; letter-spacing: 0.15em;
+      text-transform: uppercase; color: var(--accent); margin-bottom: 0.4rem;
+    }
+    .phase-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.1rem; font-weight: 400; margin-bottom: 0.3rem;
+    }
+    .phase-desc { font-size: 0.8rem; color: var(--mid); line-height: 1.6; }
+    .prog-includes { margin-bottom: 2rem; }
+    .inc-item {
+      display: flex; gap: 0.6rem; align-items: baseline;
+      font-size: 0.82rem; color: var(--mid);
+      padding: 0.5rem 0; border-bottom: 1px solid var(--light);
+    }
+    .inc-item:last-child { border-bottom: none; }
+    .inc-item::before { content: "→"; color: var(--accent); flex-shrink: 0; }
+    .prog-price {
+      margin-bottom: 1.5rem; padding-top: 1.5rem;
+      border-top: 1px solid var(--light);
+    }
+    .price-num {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2.8rem; font-weight: 300; line-height: 1;
+    }
+    .price-detail { font-size: 0.8rem; color: var(--mid); margin-top: 0.3rem; }
+    .prog-card .btn { width: 100%; text-align: center; display: block; }
+
+    /* SERVICES STRIP */
+    .services-strip { background: var(--warm); }
+    .services-intro {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 4rem; margin-bottom: 3rem; align-items: end;
+    }
+    .services-intro p { color: var(--mid); font-size: 0.95rem; line-height: 1.85; }
+    .svc-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr);
+      border: 1px solid var(--light);
+    }
+    .svc {
+      padding: 2.5rem; border-right: 1px solid var(--light); transition: background 0.3s;
+    }
+    .svc:last-child { border-right: none; }
+    .svc:hover { background: var(--sage); }
+    .svc-icon { font-size: 1.3rem; margin-bottom: 1.2rem; }
+    .svc h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.3rem; font-weight: 400; margin-bottom: 0.8rem;
+    }
+    .svc p { font-size: 0.82rem; color: var(--mid); line-height: 1.7; }
+
+    /* BRAND STRIP */
+    .brand-strip {
+      background: var(--charcoal); padding: 2.5rem 5vw;
+      display: flex; align-items: center; gap: 3rem; flex-wrap: wrap;
+    }
+    .brand-label {
+      font-size: 0.68rem; letter-spacing: 0.2em;
+      text-transform: uppercase; color: rgba(255,255,255,0.3); white-space: nowrap;
+    }
+    .brand-links { display: flex; gap: 2.5rem; flex-wrap: wrap; }
+    .brand-links a {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.1rem; color: rgba(255,255,255,0.6);
+      text-decoration: none; transition: color 0.2s;
+    }
+    .brand-links a:hover { color: var(--green); }
+
+    /* BLOG */
+    .blog { background: var(--warm); }
+    .blog-grid { display: grid; grid-template-columns: 1.5fr 1fr; gap: 2rem; margin-top: 3rem; }
+    .blog-card { background: var(--cream); padding: 2.5rem; transition: transform 0.2s; cursor: pointer; }
+    .blog-card:hover { transform: translateY(-3px); }
+    .blog-date { font-size: 0.68rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--accent); margin-bottom: 1rem; }
+    .blog-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.6rem; font-weight: 400; line-height: 1.3; margin-bottom: 1rem;
+    }
+    .blog-excerpt { font-size: 0.84rem; color: var(--mid); line-height: 1.75; margin-bottom: 1.5rem; }
+    .blog-read {
+      font-size: 0.73rem; letter-spacing: 0.12em; text-transform: uppercase;
+      color: var(--charcoal); text-decoration: none;
+      border-bottom: 1px solid var(--accent); padding-bottom: 2px;
+    }
+    .blog-full { display: none; margin-top: 1.5rem; }
+    .blog-full.open { display: block; }
+    .blog-full p { font-size: 0.88rem; color: var(--mid); line-height: 1.85; margin-bottom: 1rem; }
+    .blog-full h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.2rem; color: var(--charcoal); margin: 1.5rem 0 0.5rem; }
+    .blog-full strong { color: var(--charcoal); font-weight: 500; }
+    .blog-soon { background: var(--sage); border-left: 2px solid var(--accent); }
+
+    /* PRESS */
+    .press { background: var(--cream); }
+    .press-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; margin-top: 3rem; }
+    .press-intro { color: var(--mid); line-height: 1.85; font-size: 0.95rem; margin-bottom: 2rem; }
+    .check-list { list-style: none; }
+    .check-list li {
+      display: flex; align-items: baseline; gap: 0.8rem;
+      padding: 0.7rem 0; border-bottom: 1px solid var(--light);
+      font-size: 0.84rem; color: var(--mid);
+    }
+    .check-list li::before { content: "→"; color: var(--accent); flex-shrink: 0; }
+    .check-list.creds li::before { content: "✓"; }
+    .press-btns { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 2rem; }
+    .press-btn {
+      border: 1px solid var(--light); padding: 1.2rem;
+      text-decoration: none; color: var(--charcoal);
+      font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase;
+      text-align: center; transition: all 0.2s;
+    }
+    .press-btn:hover { background: var(--charcoal); color: white; border-color: var(--charcoal); }
+
+    /* CONTACT */
+    .contact {
+      background: var(--charcoal); color: white;
+      text-align: center; padding: 9rem 5vw;
+    }
+    .contact .label { color: rgba(255,255,255,0.35); }
+    .contact h2 { color: white; max-width: 640px; margin: 0 auto 1.5rem; }
+    .contact-sub { color: rgba(255,255,255,0.55); max-width: 460px; margin: 0 auto 3.5rem; font-size: 0.95rem; line-height: 1.85; }
+    .contact-btns { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-bottom: 3rem; }
+    .contact-links { display: flex; justify-content: center; gap: 2.5rem; flex-wrap: wrap; }
+    .contact-links a {
+      font-size: 0.73rem; letter-spacing: 0.14em; text-transform: uppercase;
+      color: rgba(255,255,255,0.35); text-decoration: none; transition: color 0.2s;
+    }
+    .contact-links a:hover { color: white; }
+
+    /* FOOTER */
+    footer {
+      background: #181818; padding: 2rem 5vw;
+      display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;
+    }
+    .footer-name { font-family: 'Cormorant Garamond', serif; color: rgba(255,255,255,0.4); font-size: 0.9rem; }
+    .footer-links { display: flex; gap: 2rem; }
+    .footer-links a {
+      font-size: 0.68rem; letter-spacing: 0.1em; text-transform: uppercase;
+      color: rgba(255,255,255,0.25); text-decoration: none; transition: color 0.2s;
+    }
+    .footer-links a:hover { color: rgba(255,255,255,0.6); }
+
+    /* RESPONSIVE */
+    @media (max-width: 960px) {
+      nav { padding: 1rem 4vw; }
+      .nav-links { gap: 1.5rem; }
+      .s { padding: 4rem 4vw; }
+      .hero { grid-template-columns: 1fr; min-height: auto; }
+      .hero-text { padding: 7rem 4vw 3rem; }
+      .hero-img { height: 65vw; }
+      .phil-grid, .prog-grid, .services-intro, .press-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+      .svc-grid, .wiggle-steps { grid-template-columns: 1fr; }
+      .svc { border-right: none; border-bottom: 1px solid var(--light); }
+      .wiggle-step { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.08); }
+      .blog-grid { grid-template-columns: 1fr; }
+      .press-btns { grid-template-columns: 1fr; }
+      .contact { padding: 5rem 4vw; }
+      footer { flex-direction: column; text-align: center; }
+      .stats { grid-template-columns: 1fr 1fr; }
+      .prog-card { position: static; }
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <img src="isabel-photo.JPG" alt="Isabel Kennedy" class="header-photo">
-        <h1>Isabel Kennedy</h1>
-        <p class="tagline">Harnessing creativity to combat burnout</p>
-        <p class="subtitle">Creative Coach & Burnout Prevention Specialist | Career Coach | Berlin | 10,000+ hours of interviewing experience</p>
-    </header>
-    
-    <nav>
-        <a href="#about">About</a>
-        <a href="#services">Services</a>
-        <a href="#blog">Blog</a>
-        <a href="#press">Press Kit</a>
-        <a href="#contact">Contact</a>
-    </nav>
-    
-    <section id="about">
-        <h2>About Isabel Kennedy</h2>
-        <div class="about-content">
-            <p>Isabel Kennedy is a creative coach and career coach based in Berlin, helping burned-out professionals make aligned career decisions through creative methodologies and body-based decision-making tools.</p>
-            
-            <p>With over 10,000 hours of direct executive interviewing experience across global pharmaceutical and biotech sectors, Isabel brings a unique perspective to professional development. She's conducted thousands of interviews, hired teams for critical initiatives including Ebola and COVID vaccine development, and worked with executives developing radioligand therapy programs.</p>
-            
-            <div class="highlight">
-                <p><strong>In a time of AI, what is happening to purpose?</strong></p>
-                <p>Isabel explores this question through her work, helping professionals navigate career transitions while maintaining meaning and authentic connection to their work.</p>
-            </div>
-            
-            <p>Now the founder of Kennedy Creative Consulting, Isabel combines traditional coaching with creative practices including ceramics workshops, meditation, and embodied decision-making frameworks.</p>
-            
-            <p>Isabel is also a marathon runner, practicing ceramicist, and dedicated meditator with 15 days of Vipassana meditation in total silence. She brings the same discipline and curiosity from these practices into her work with clients.</p>
+
+  <!-- NAV -->
+  <nav>
+    <a href="#" class="nav-logo">Isabel Kennedy</a>
+    <ul class="nav-links">
+      <li><a href="#philosophy">About</a></li>
+      <li><a href="#wiggle">The Wiggle</a></li>
+      <li><a href="#programme">Work With Me</a></li>
+      <li><a href="#blog">Writing</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" style="padding:0;">
+    <div class="hero-text">
+      <p class="eyebrow">Creative Coach · Burnout Prevention · Ceramics</p>
+      <h1>Return to<br><em>yourself.</em></h1>
+      <p class="hero-sub">
+        Creativity is the fastest route back to who you actually are. And when you find that — you stop burning out and start choosing.
+      </p>
+      <div class="cta-row">
+        <!-- REPLACE WITH YOUR ACTUAL CALENDLY LINK -->
+        <a href="https://calendly.com/isabel-kennedycreativeconsulting/free-connect-isabel-kennedy-creative-consulting-30mins" target="_blank" rel="noopener" class="btn btn-dark">Book a discovery call</a>
+        <a href="#programme" class="btn btn-outline">The programme</a>
+      </div>
+    </div>
+    <div class="hero-img">
+      <img src="isabel-kennedy.jpg" alt="Isabel Kennedy — Creative Coach and Burnout Prevention Specialist" loading="eager">
+      <div class="hero-caption">Founder · Kennedy Creative Consulting · Fishy Ceramics</div>
+    </div>
+  </section>
+
+  <!-- PHILOSOPHY -->
+  <section class="s philosophy" id="philosophy">
+    <p class="label">The philosophy</p>
+    <h2>The right brain isn't a luxury.<br><em>It's how you survive.</em></h2>
+    <div class="phil-grid">
+      <div class="phil-text">
+        <p>After 10+ years placing executives across global pharmaceutical and biotech companies — over 10,000 interviews, €14M in revenue — I noticed a pattern.</p>
+        <p><strong>The most sustainably effective leaders weren't just analytically brilliant.</strong> They had a creative practice. A physical discipline. A way of staying connected to themselves underneath the pressure.</p>
+        <p>The ones who didn't? They burned out. Or they succeeded in ways that slowly hollowed them out. Most people ignore the signals until they crash. Then it's 6–12 months of forced recovery — the career cost and opportunity cost of which is immense.</p>
+        <p>We've been optimised into left-brain-only existence. Constant stimulation, dopamine hits masquerading as fulfilment, jobs that consume us. The antidote isn't quitting everything. <strong>It's reawakening the right brain — through creativity, movement, and the body's own intelligence — before you're forced to stop.</strong></p>
+        <div class="phil-links">
+          <a href="https://kennedycreativeconsulting.com" target="_blank" rel="noopener" class="link-a">Kennedy Creative Consulting ↗</a>
+          <a href="https://fishyceramics.com" target="_blank" rel="noopener" class="link-a">Fishy Ceramics — ceramics artist residencies & workshops ↗</a>
         </div>
-    </section>
-    
-    <section id="services">
-        <h2>Innovative solutions for dynamic teams</h2>
-        
-        <div class="services-grid">
-            <div class="service-card">
-                <div class="service-icon">🔄</div>
-                <h3>Stress management</h3>
-                <p>Effective techniques to alleviate stress and boost team vitality.</p>
-            </div>
-            
-            <div class="service-card">
-                <div class="service-icon">💬</div>
-                <h3>Body-centered leadership</h3>
-                <p>Enhance resilience and focus with body-based strategies.</p>
-            </div>
-            
-            <div class="service-card">
-                <div class="service-icon">✉️</div>
-                <h3>Leadership coaching</h3>
-                <p>Customized guidance for leaders navigating transitions.</p>
-            </div>
-            
-            <div class="service-card">
-                <div class="service-icon">✓</div>
-                <h3>Training sessions</h3>
-                <p>Interactive workshops on stress, communication, and leadership.</p>
-            </div>
-            
-            <div class="service-card">
-                <div class="service-icon">♥</div>
-                <h3>Public speaking</h3>
-                <p>Engage in discussions on leadership and workplace health.</p>
-            </div>
-            
-            <div class="service-card">
-                <div class="service-icon">✦</div>
-                <h3>Expert analysis</h3>
-                <p>Professional insights on leadership and mental health for media.</p>
-            </div>
+      </div>
+      <div class="phil-right">
+        <div class="pull-quote">
+          <blockquote>"Creativity isn't what you make. It's how you return to yourself. And when you find that — you can go anywhere."</blockquote>
+          <cite>— Isabel Kennedy</cite>
         </div>
-        
-        <div style="margin-top: 80px;">
-            <div class="service-row">
-                <div class="service-block">
-                    <h3>Burnout prevention for high performers</h3>
-                    <p>Strategies to combat and recover from burnout.</p>
-                </div>
-                
-                <div class="service-block">
-                    <h3>Executive coaching for career clarity</h3>
-                    <p>Supporting leaders through transitions.</p>
-                </div>
-            </div>
-            
-            <div class="service-row">
-                <div class="service-block">
-                    <h3>Corporate wellbeing workshops</h3>
-                    <p>Engaging sessions to enhance productivity.</p>
-                </div>
-                
-                <div class="service-block">
-                    <h3>Speaking on workplace wellbeing</h3>
-                    <p>Keynotes on leadership and mental health.</p>
-                </div>
-            </div>
-            
-            <div style="text-align: center; margin-top: 40px;">
-                <div class="service-block" style="max-width: 700px; margin: 0 auto;">
-                    <h3>Media commentary and thought leadership</h3>
-                    <p>Insights for press and events.</p>
-                </div>
-            </div>
+        <div class="stats">
+          <div class="stat">
+            <div class="stat-n">10K+</div>
+            <div class="stat-l">Executive interviews in global pharma & biotech</div>
+          </div>
+          <div class="stat">
+            <div class="stat-n">€14M</div>
+            <div class="stat-l">Revenue generated as an executive headhunter</div>
+          </div>
+          <div class="stat">
+            <div class="stat-n">10+</div>
+            <div class="stat-l">Years in organisational leadership & transformation</div>
+          </div>
+          <div class="stat">
+            <div class="stat-n">15</div>
+            <div class="stat-l">Days of Vipassana meditation in total silence</div>
+          </div>
         </div>
-    </section>
-    
-    <section id="blog">
-        <h2>Blog</h2>
-        
-        <div class="blog-intro">
-            <p style="text-align: center; font-size: 1.2rem; line-height: 1.8; margin-bottom: 50px; max-width: 800px; margin-left: auto; margin-right: auto; font-style: italic; color: var(--accent);">
-                Writing is one of my favorite creative expressions. From my personal journey to opinion pieces, research-based observations to interviews—this is a mix of what moves me. I hope you enjoy.
-            </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- KENNEDY WIGGLE -->
+  <section class="s wiggle" id="wiggle">
+    <p class="label">A framework a decade in the making</p>
+    <h2>The Kennedy Wiggle</h2>
+    <p class="wiggle-intro">
+      Are you in an upward or downward spiral? Good feelings breed more good feelings. Bad feelings breed more bad feelings. The Kennedy Wiggle is how you work with that — not against it. It runs through everything I do.
+    </p>
+    <div class="wiggle-steps">
+      <div class="w-step">
+        <div class="w-num">01</div>
+        <div class="w-title">Acknowledge</div>
+        <p class="w-desc">Where are you right now — upward spiral or downward? Just notice.</p>
+      </div>
+      <div class="w-step">
+        <div class="w-num">02</div>
+        <div class="w-title">Bring it closer</div>
+        <p class="w-desc">Sit with it. Let it inform you. Don't push it away.</p>
+      </div>
+      <div class="w-step">
+        <div class="w-num">03</div>
+        <div class="w-title">Do something with it</div>
+        <p class="w-desc">Move your body. Make something. Create.</p>
+      </div>
+    </div>
+    <div class="wiggle-science">
+      <span>Backed by research from</span>
+      <a href="https://pubmed.ncbi.nlm.nih.gov/17576282/" target="_blank" rel="noopener">Brackett / Yale Emotional Intelligence</a>
+      <a href="https://pubmed.ncbi.nlm.nih.gov/12916575/" target="_blank" rel="noopener">Gross / Stanford Emotion Lab</a>
+      <a href="https://www.besselvanderkolk.com/resources/the-body-keeps-the-score" target="_blank" rel="noopener">Van der Kolk / The Body Keeps the Score</a>
+    </div>
+  </section>
+
+  <!-- PROGRAMME -->
+  <section class="s programme" id="programme">
+    <p class="label">One offer. Done properly.</p>
+    <h2>The Burnout<br><em>Prevention Programme</em></h2>
+    <div class="prog-grid">
+      <div class="prog-left">
+        <p>This isn't for people who are already on the floor. It's for people who can feel it coming — the Sunday dread, the Thursday pit-of-stomach feeling, the sense that something needs to change before it changes you.</p>
+        <p><strong>Most people ignore the signals until they crash. Then it's 6–12 months of forced recovery.</strong> The career cost and the opportunity cost of that is immense.</p>
+        <blockquote>"The goal is to choose your path — not to be forced into it by a breakdown."</blockquote>
+        <p>Over nine weeks, we use the Kennedy Wiggle, colour mapping, body-based decision-making, and daily creative practice to build a different relationship with yourself and your work. Not art — creativity. Walking a different route. Drawing with your non-dominant hand. Noticing what your body already knows.</p>
+        <p>The Kennedy Wiggle runs throughout every session. We also work with the Body Compass — a practice for learning to read your own yes and no when analytical thinking alone won't get you there.</p>
+        <p><strong>This is not therapy. Not psychology. Not for people who don't trust their intuition or won't trust a process.</strong> It's for leaders who are ready to use a different kind of intelligence.</p>
+      </div>
+      <div class="prog-card">
+        <p class="prog-tag">The only product I sell</p>
+        <h3>The Burnout Prevention Programme</h3>
+        <p class="sub">9 weeks · 75-minute sessions · International via Google Meet</p>
+
+        <div class="prog-phases">
+          <div class="phase">
+            <div class="phase-label">Weeks 1–3 · Phase One</div>
+            <div class="phase-title">Landing</div>
+            <p class="phase-desc">Intention setting. Colour mapping — your life across six areas. Meet your Anxiety Animal. Learn the Body Compass. Map your current week against your ideal one.</p>
+          </div>
+          <div class="phase">
+            <div class="phase-label">Weeks 4–6 · Phase Two</div>
+            <div class="phase-title">Integration</div>
+            <p class="phase-desc">Why purpose is simpler than you think — and how to map it. Energy architecture. Distinguishing anxiety from intuition. Designing the week that actually fits you.</p>
+          </div>
+          <div class="phase">
+            <div class="phase-label">Weeks 7–9 · Phase Three</div>
+            <div class="phase-title">Completion</div>
+            <p class="phase-desc">Make the decision. Build a sustainable rhythm. Set your commitments. Land well in the next chapter — on your terms.</p>
+          </div>
         </div>
-        
-        <!-- Blog Posts Container -->
-        <div class="blog-posts">
-            
-            <!-- NEWEST POSTS GO HERE - ADD ABOVE THIS LINE -->
-            
-            <article class="blog-post">
-                <div class="post-date">December 2025</div>
-                <h3>Why Your Gut Matters More Than Ever (And How to Actually Use It)</h3>
-                <p class="post-excerpt">
-                    In a time of AI and endless data, how important is your gut feeling? Turns out—increasingly so. It offers stability in a time of constant change.
-                </p>
-                <div class="post-content">
-                    <p>I've spent the last decade interviewing executives for over 10,000 hours. I learned many valuable lessons in this time. A clear trend I saw was that the best leaders aren't just analytical powerhouses—they're the ones who've figured out how to access something deeper. Something that doesn't live in spreadsheets or strategy decks.</p>
-                    
-                    <p>They've learned to listen to their bodies.</p>
-                    
-                    <p><strong>The Science Behind Your Gut Feel</strong></p>
-                    
-                    <p>Harvard Business Review research shows that people who combine data and intuition outperform those relying on analytics alone. Our subconscious minds send us signals before we intellectualise the issues—this is called Somatic Intelligence. Fancy talk for "gut feel" or just any type of feeling. Shoulders hunching, voice feeling blocked, chest tight. All somatic intelligence.</p>
-                    
-                    <p>Antonio Damasio's research on the Somatic Marker Hypothesis demonstrates how physical sensations can guide decision-making in complex situations. Laura Huang, Professor at Harvard Business School, confirms that gut feelings are essential when we're making high-stakes decisions where more data won't give us greater clarity.</p>
-                    
-                    <p>Ever wondered why "gut feel" is something commonly discussed? It's the simplest way to explain somatic intelligence.</p>
-                    
-                    <p>We are all working with our bodies—we just listen to different extents.</p>
-                    
-                    <p>From speaking to such a wide data set, we usually know what our bodies want. When we have made a mistake—signed the wrong contract, moved to the wrong location—we feel it in our body. The interesting thing is we live in a world where we are made to quiet the knowing, and the louder the distractions, the more removed we are and the harder it is to come "home" to our decision-making.</p>
-                    
-                    <p>In times of stress, rush, and panic it's really easy to feel like you've switched off your intuition or suppressed it altogether... If you just sit and ask yourself on a scale of 1-10 how strong is your intuition? Breathe… what is your answer?</p>
-                    
-                    <p>Sometimes this feels non-existent until you're trying to go to sleep and the meeting you had in the day without the outcome you wanted, the thought of tomorrow's meetings, that email that needed replying to—or you wake in the middle of the night… well that's the body—and try as we may, we can't ignore it forever.</p>
-                    
-                    <p><strong>How the Best Leaders Use Somatic Intelligence</strong></p>
-                    
-                    <p>Recently, I asked a long-standing client how playing the guitar has impacted his job. His answer was that it "makes me a better me and better leader. It is my therapy, ventilation and energy booster." This just drives me to open up the world of creativity to my clients.</p>
-                    
-                    <p>The best leaders I've interviewed over the years tell me about how they innovated production lines, or genome sequencing, or how to excrete radio particles through kidneys, their gardens, the books they're reading, the instruments they play, the food they cook. And honestly? That's where the immense capacity to be excellent sustainably comes from. Hard jobs are hard—executives travel and have long hours. We can't change that, but when purpose runs alongside, the right side of the brain looks after the left.</p>
-                    
-                    <p>So the execs I have worked with realise that integrating both sides matters. The left brain—strategic, analytical, data-driven—gets you in the room. But the right brain—creative, intuitive, body-connected—to me it is what makes you sustainably effective.</p>
-                    
-                    <p><strong>Simple Ways to Start Listening</strong></p>
-                    
-                    <p>You don't need to overhaul your entire life to access somatic intelligence and right brain living. Honestly—just start simple:</p>
-                    
-                    <p><strong>Recognize your "yes."</strong> What does agreement feel like in your body? Lightness? Expansion? Warmth?</p>
-                    
-                    <p><strong>Recognize your "no."</strong> What does resistance feel like? Heaviness? Contraction? Tension?</p>
-                    
-                    <p><strong>Walk a different route.</strong> Check in on your daily processes and do something a bit different. Turn right when you get out of the train not left and walk a block in a different loop—it's simple and it's creative.</p>
-                    
-                    <p><strong>Practice daily check-ins.</strong> Before your next big decision, pause. What is your body telling you before your mind jumps in?</p>
-                    
-                    <p><strong>Find your equivalent of guitar or clay.</strong> What activity makes you lose track of time? That's your doorway to the right brain.</p>
-                    
-                    <p>We need both sides working together. We need data and intuition. Strategy and somatic intelligence.</p>
-                    
-                    <p>Especially now, as we navigate AI, evolving work cultures, and the question of what truly matters—your gut isn't optional. It's essential.</p>
-                    
-                    <p><em>Want to explore somatic intelligence in your leadership? I work with executives 1-on-1 using body-based decision-making tools. Email me at <a href="mailto:Isabel@kennedycreativeconsulting.com">Isabel@kennedycreativeconsulting.com</a> to learn more.</em></p>
-                    
-                    <p style="margin-top: 40px; padding-top: 20px; border-top: 1px solid #ddd; font-size: 0.9rem; color: #666;">
-                        <strong>Sources & Further Reading:</strong><br><br>
-                        Damasio, A. (1994). <em>Descartes' Error: Emotion, Reason, and the Human Brain.</em> Penguin Books.<br>
-                        Huang, L. (2020). <em>Edge: Turning Adversity into Advantage.</em> Portfolio/Penguin.<br>
-                        Bonabeau, E. (2003). "Don't Trust Your Gut." <em>Harvard Business Review.</em><br>
-                        van der Kolk, B. (2014). <em>The Body Keeps the Score.</em> Viking.<br>
-                        Levine, P. (2010). <em>In an Unspoken Voice.</em> North Atlantic Books.<br>
-                        Beck, M. (2001). <em>Finding Your Own North Star.</em> Harmony Books.<br>
-                        Hanh, T.N. (1975). <em>The Miracle of Mindfulness.</em> Beacon Press.
-                    </p>
-                </div>
-                <button class="read-more-btn" onclick="this.previousElementSibling.classList.toggle('expanded'); this.textContent = this.textContent === 'Read More' ? 'Read Less' : 'Read More'">Read More</button>
-            </article>
-            
-            
-            <!-- BLOG POST TEMPLATE - COPY THIS ENTIRE SECTION FOR EACH NEW POST -->
-            <!-- Paste NEW posts ABOVE this template so they appear first -->
-            
-            <article class="blog-post">
-                <div class="post-date">December 11, 2025</div>
-                <h3>Your Blog Post Title Goes Here</h3>
-                <p class="post-excerpt">
-                    Write a compelling 2-3 sentence summary here. This is what readers see before expanding the full post. Make it intriguing and clear about what they'll discover.
-                </p>
-                <div class="post-content">
-                    <p>Your full blog post content starts here. Write naturally, from the heart.</p>
-                    
-                    <p>Each new paragraph should be in its own paragraph tag like this. Keep it flowing and authentic to your voice.</p>
-                    
-                    <p><strong>You can emphasize key points with bold text.</strong></p>
-                    
-                    <p>You can also use <em>italics for emphasis</em> or to highlight certain phrases.</p>
-                    
-                    <p>Add as many paragraphs as you need. Let your creativity flow.</p>
-                    
-                    <p>End with a thought, question, or invitation that feels right for this piece.</p>
-                </div>
-                <button class="read-more-btn" onclick="this.previousElementSibling.classList.toggle('expanded'); this.textContent = this.textContent === 'Read More' ? 'Read Less' : 'Read More'">Read More</button>
-            </article>
-            
-            <!-- END BLOG POST TEMPLATE -->
-            <!-- Copy everything from "BLOG POST TEMPLATE" to "END BLOG POST TEMPLATE" for each new post -->
-            
+
+        <div class="prog-includes">
+          <div class="inc-item">9 × 75-minute 1:1 sessions (weekly)</div>
+          <div class="inc-item">Daily 60-second creative practice + homework</div>
+          <div class="inc-item">The Kennedy Wiggle framework throughout</div>
+          <div class="inc-item">Body Compass training — your yes and your no</div>
+          <div class="inc-item">Colour mapping across six life areas</div>
+          <div class="inc-item">Optional creative workshop — arranged and booked by me, included in the price (in-person or via my creative network)</div>
+          <div class="inc-item">Voice note support between sessions</div>
         </div>
-    </section>
-    
-    
-    <section id="press">
-        <h2>Press Kit</h2>
-        
-        <div class="press-kit">
-            <h3>Media Information</h3>
-            
-            <div class="press-content">
-                <div class="press-bio">
-                    <p><strong>Isabel Kennedy</strong> is a creative coach and career coach based in Berlin who helps burned-out professionals make aligned career decisions through creative methodologies. With over 10,000 hours of executive interviewing experience, she bridges corporate expertise with psychological insight, specializing in burnout prevention and career transitions for high-achievers.</p>
-                </div>
-                
-                <div class="press-topics">
-                    <h4>Available for Expert Commentary On:</h4>
-                    <ul>
-                        <li>Professional burnout prevention and recovery</li>
-                        <li>Career transitions for high-achievers</li>
-                        <li>Creative approaches to leadership development</li>
-                        <li>Body-based decision-making in professional contexts</li>
-                        <li>Purpose and meaning in the age of AI</li>
-                        <li>Executive hiring and talent assessment</li>
-                        <li>Workplace wellbeing and mental health</li>
-                    </ul>
-                </div>
-                
-                <div class="available-for">
-                    <div class="available-item">Podcast Interviews</div>
-                    <div class="available-item">Speaking Engagements</div>
-                    <div class="available-item">Media Commentary</div>
-                    <div class="available-item">Article Contributions</div>
-                </div>
-                
-                <div style="margin-top: 40px; padding-top: 40px; border-top: 1px solid var(--cream);">
-                    <h4 style="margin-bottom: 20px; color: var(--accent);">Background & Credentials:</h4>
-                    <ul style="list-style: none; padding: 0;">
-                        <li style="padding: 8px 0;">✓ BSc Business Management, Brighton University</li>
-                        <li style="padding: 8px 0;">✓ Former Executive Headhunter, Global Pharma & Biotech</li>
-                        <li style="padding: 8px 0;">✓ Founder, Kennedy Creative Consulting</li>
-                        <li style="padding: 8px 0;">✓ 10,000+ hours of executive interviewing experience</li>
-                    </ul>
-                </div>
-            </div>
+
+        <a href="https://calendly.com/isabel-kennedycreativeconsulting/free-connect-isabel-kennedy-creative-consulting-30mins" target="_blank" rel="noopener" class="btn btn-dark">Book a discovery call</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ALSO AVAILABLE -->
+  <section class="s services-strip" id="services">
+    <div class="services-intro">
+      <div>
+        <p class="label">Also available</p>
+        <h2>Workshops &amp; <em>speaking</em></h2>
+      </div>
+      <p>Alongside the programme, I run corporate ceramics workshops and speak on creativity in leadership, burnout prevention, and purpose in the age of AI. Clients include Soho House. Available internationally.</p>
+    </div>
+    <div class="svc-grid">
+      <div class="svc">
+        <div class="svc-icon">🏺</div>
+        <h3>Corporate Workshops with Clay</h3>
+        <p>Leadership sessions using ceramics as the medium. Unlocks right-brain thinking in teams — building creativity, resilience, and presence in leaders who are stuck in their heads.</p>
+      </div>
+      <div class="svc">
+        <div class="svc-icon">✦</div>
+        <h3>Speaking & Keynotes</h3>
+        <p>Available for podcasts, keynotes, and media commentary on creativity in leadership, the Kennedy Wiggle, burnout prevention, and purpose in the age of AI.</p>
+      </div>
+      <div class="svc">
+        <div class="svc-icon">🧭</div>
+        <h3>Press & Expert Commentary</h3>
+        <p>Available for press and media on executive burnout, creative leadership, body-based decision-making, and career transitions for high-achievers. Dual UK-German background.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- BRAND STRIP -->
+  <div class="brand-strip">
+    <span class="brand-label">Part of the Isabel Kennedy ecosystem</span>
+    <div class="brand-links">
+      <a href="https://kennedycreativeconsulting.com" target="_blank" rel="noopener">Kennedy Creative Consulting</a>
+      <span style="color:rgba(255,255,255,0.15)">·</span>
+      <a href="https://fishyceramics.com" target="_blank" rel="noopener">Fishy Ceramics</a>
+      <span style="color:rgba(255,255,255,0.15)">·</span>
+      <a href="https://www.linkedin.com/in/isabelgertrudekennedy" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+  </div>
+
+  <!-- BLOG -->
+  <section class="s blog" id="blog">
+    <p class="label">Writing</p>
+    <h2>From the world of <em>Isabel Kennedy</em></h2>
+    <p style="color:var(--mid);max-width:560px;line-height:1.85;margin-bottom:3rem;">Writing is one of my favourite creative expressions — research-based observations, personal reflections, and the messy intersections of creativity, burnout, and decision-making.</p>
+    <div class="blog-grid">
+      <div class="blog-card">
+        <p class="blog-date">December 2025</p>
+        <h3 class="blog-title">Why Your Gut Matters More Than Ever (And How to Actually Use It)</h3>
+        <p class="blog-excerpt">In a time of AI and endless data, how important is your gut feeling? After 10,000+ hours interviewing executives, I've seen that the best leaders don't just rely on data. They've learned to listen to their bodies.</p>
+        <a href="#" class="blog-read" onclick="toggleBlog(event,'b1')">Read more →</a>
+        <div id="b1" class="blog-full">
+          <p>I've spent the last decade interviewing executives for over 10,000 hours. A clear trend I saw was that the best leaders aren't just analytical powerhouses — they're the ones who've figured out how to access something deeper. Something that doesn't live in spreadsheets or strategy decks.</p>
+          <p>They've learned to listen to their bodies.</p>
+          <h3>The science behind your gut feel</h3>
+          <p>Harvard Business Review research shows that people who combine data and intuition outperform those relying on analytics alone. Antonio Damasio's research on the Somatic Marker Hypothesis demonstrates how physical sensations guide decision-making in complex situations. Laura Huang at Harvard Business School confirms that gut feelings are essential when more data won't give you greater clarity.</p>
+          <h3>How the best leaders use it</h3>
+          <p>Recently, I asked a long-standing client how playing the guitar has impacted his job. His answer: it "makes me a better me and better leader. It is my therapy, ventilation and energy booster." The left brain — strategic, analytical — gets you in the room. The right brain — creative, intuitive, body-connected — is what makes you sustainably effective.</p>
+          <h3>Simple ways to start</h3>
+          <p><strong>Recognise your yes.</strong> What does agreement feel like in your body? Lightness? Expansion?</p>
+          <p><strong>Recognise your no.</strong> What does resistance feel like? Heaviness? Contraction?</p>
+          <p><strong>Walk a different route.</strong> Turn right when you'd normally turn left. Simple and creative.</p>
+          <p><strong>Find your guitar or your clay.</strong> What makes you lose track of time? That's your doorway to the right brain.</p>
+          <p><em>Want to explore this in your own leadership? <a href="#contact" style="color:var(--charcoal)">Get in touch.</a></em></p>
         </div>
-    </section>
-    
-    <section id="contact">
-        <div class="contact-section">
-            <h2>Get in Touch</h2>
-            <p style="font-size: 1.2rem; margin-bottom: 30px; color: var(--text);">Available for speaking engagements, media inquiries, and coaching consultations.</p>
-            
-            <a href="mailto:Isabel@kennedycreativeconsulting.com" class="contact-button">Email Me</a>
-            <a href="https://www.linkedin.com/in/isabelgertrudekennedy/" class="contact-button secondary" target="_blank">LinkedIn</a>
-            <a href="https://kennedycreativeconsulting.com" class="contact-button secondary" target="_blank">Work With Me</a>
-            
-            <p style="margin-top: 40px; color: var(--accent);">
-                📍 Berlin
-            </p>
+      </div>
+      <div class="blog-card blog-soon">
+        <p class="blog-date">Coming soon</p>
+        <h3 class="blog-title" style="font-size:1.2rem;">More writing on the way</h3>
+        <p class="blog-excerpt">New essays on creativity, the Kennedy Wiggle, right-brain leadership, and purpose in the age of AI — published regularly. Follow on LinkedIn for updates.</p>
+        <a href="https://www.linkedin.com/in/isabelgertrudekennedy" target="_blank" rel="noopener" class="blog-read">Follow on LinkedIn →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRESS -->
+  <section class="s press" id="press">
+    <p class="label">Press & media</p>
+    <h2>Available for expert <em>commentary</em></h2>
+    <div class="press-grid">
+      <div>
+        <p class="press-intro">Isabel Kennedy is a creative coach and former executive headhunter who bridges corporate expertise with somatic intelligence, specialising in burnout prevention and creative approaches to leadership for high-achievers.</p>
+        <p class="label" style="margin-top:1.5rem;">Topics</p>
+        <ul class="check-list">
+          <li>Professional burnout prevention and recovery</li>
+          <li>Creative approaches to leadership development</li>
+          <li>Body-based decision-making in professional contexts</li>
+          <li>The Kennedy Wiggle framework</li>
+          <li>Purpose and meaning in the age of AI</li>
+          <li>Career transitions for high-achievers</li>
+          <li>Right-brain engagement as an antidote to burnout</li>
+        </ul>
+      </div>
+      <div>
+        <p class="label">Background & credentials</p>
+        <ul class="check-list creds">
+          <li>BSc Business Management, University of Brighton</li>
+          <li>Founder, Kennedy Creative Consulting</li>
+          <li>Founder, Fishy Ceramics — ceramics artist residencies & workshops</li>
+          <li>Former Executive Headhunter, Global Pharma & Biotech</li>
+          <li>Over 10,000 hours of executive interviewing experience</li>
+          <li>15 days Vipassana meditation in silence</li>
+          <li>Self-inquiry practice — 3 weeks at Ramana Maharshi's ashram, Arunachala</li>
+          <li>Marathon runner & practising ceramicist</li>
+          <li>Dual UK-German citizenship</li>
+        </ul>
+        <div class="press-btns">
+          <a href="mailto:Isabel@kennedycreativeconsulting.com" class="press-btn">Podcast inquiry</a>
+          <a href="mailto:Isabel@kennedycreativeconsulting.com" class="press-btn">Speaking inquiry</a>
+          <a href="mailto:Isabel@kennedycreativeconsulting.com" class="press-btn">Media commentary</a>
+          <a href="mailto:Isabel@kennedycreativeconsulting.com" class="press-btn">Article contribution</a>
         </div>
-    </section>
-    
-    <footer>
-        <p>&copy; 2025 Isabel Kennedy. All rights reserved.</p>
-        <p style="margin-top: 10px; font-size: 0.85rem;">Leadership Coach | Burnout Prevention Specialist | Creative Consultant</p>
-    </footer>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="s contact" id="contact">
+    <p class="label">Get in touch</p>
+    <h2>Ready to choose your path<br><em>before it's chosen for you?</em></h2>
+    <p class="contact-sub">I offer a 30-minute discovery call to see if we're a good fit. No pressure, no script — just a real conversation about where you are and where you want to be.</p>
+    <div class="contact-btns">
+      <a href="https://calendly.com/isabel-kennedycreativeconsulting/free-connect-isabel-kennedy-creative-consulting-30mins" target="_blank" rel="noopener" class="btn btn-white">Book a discovery call</a>
+      <a href="mailto:Isabel@kennedycreativeconsulting.com" class="btn btn-ghost">Send an email</a>
+    </div>
+    <div class="contact-links">
+      <a href="https://www.linkedin.com/in/isabelgertrudekennedy" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://kennedycreativeconsulting.com" target="_blank" rel="noopener">Kennedy Creative Consulting</a>
+      <a href="https://fishyceramics.com" target="_blank" rel="noopener">Fishy Ceramics</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <span class="footer-name">© 2026 Isabel Kennedy. All rights reserved.</span>
+    <div class="footer-links">
+      <a href="https://kennedycreativeconsulting.com" target="_blank" rel="noopener">Kennedy Creative Consulting</a>
+      <a href="https://fishyceramics.com" target="_blank" rel="noopener">Fishy Ceramics</a>
+      <a href="mailto:Isabel@kennedycreativeconsulting.com">Contact</a>
+    </div>
+  </footer>
+
+  <script>
+    function toggleBlog(e, id) {
+      e.preventDefault();
+      const el = document.getElementById(id);
+      const isOpen = el.classList.toggle('open');
+      e.target.textContent = isOpen ? 'Read less ↑' : 'Read more →';
+    }
+  </script>
+
 </body>
 </html>
