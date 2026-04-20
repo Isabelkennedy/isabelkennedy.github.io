@@ -6,8 +6,8 @@
 
   <!-- ─── SEO: Primary meta ─────────────────────────────── -->
   <title>Isabel Kennedy | Creative Coach & Burnout Prevention | Berlin & London</title>
-  <meta name="description" content="Isabel Kennedy is a creative coach and burnout prevention specialist in Berlin and London. Helping executives return to themselves through the Kennedy Wiggle, somatic intelligence, and creative leadership coaching." />
-  <meta name="keywords" content="creative coach, career coach, burnout Berlin, burnout London, burnout prevention, executive coach, somatic coach, Isabel Kennedy, Kennedy Wiggle, leadership coaching, coaching Berlin, coaching London" />
+  <meta name="description" content="Isabel Kennedy — creative coach, burnout prevention specialist, and ceramic tile artist working in Mumbai (Bombay) and London. Handmade ceramic tiles, executive coaching, the Kennedy Wiggle, and corporate ceramics workshops." />
+  <meta name="keywords" content="creative coach, burnout prevention, executive coach, Isabel Kennedy, Kennedy Wiggle, handmade ceramic tiles Mumbai, ceramic tiles Bombay, bespoke tiles India, ceramic tile artist London, Fishy Ceramics, somatic coach, leadership coaching" />
   <link rel="canonical" href="https://www.isabelkennedy.com/" />
 
   <!-- ─── Open Graph ─────────────────────────────────────── -->
@@ -101,6 +101,8 @@
 
   <style>
     /* ─── Brand palette ──────────────────────────────────── */
+    /* Contrast note: --lime (#CCFF00) is used exclusively on --charcoal (#333)
+       backgrounds, achieving ~7:1 contrast ratio (AAA). Never on white. */
     :root {
       --cream:       #faf7f2;
       --pink-white:  #fff8fe;
@@ -154,49 +156,49 @@
       margin-bottom: 2rem;
     }
 
-    /* ─── Buttons ────────────────────────────────────────── */
-    .btn-primary {
-      display: inline-block;
-      background: var(--charcoal);
-      color: var(--white);
-      padding: 0.9rem 2rem;
-      font-size: 0.85rem;
-      font-weight: 500;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      border-radius: 2px;
-      transition: background 0.2s, transform 0.15s;
-    }
-    .btn-primary:hover { background: #111; transform: translateY(-1px); }
-
-    .btn-ghost {
-      display: inline-block;
-      border: 1.5px solid var(--charcoal);
-      color: var(--charcoal);
-      padding: 0.85rem 1.8rem;
-      font-size: 0.82rem;
-      font-weight: 400;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      border-radius: 2px;
-      margin-left: 1rem;
-      transition: background 0.2s, color 0.2s;
-    }
-    .btn-ghost:hover { background: var(--charcoal); color: var(--cream); }
-
+    /* ─── Buttons — base + modifiers ────────────────────── */
+    /* ─── Button system — single source of truth ────────── */
+    /* All buttons share identical box model. Colour only differs. */
+    .btn-primary,
+    .btn-ghost,
     .btn-dark {
       display: inline-block;
-      background: var(--charcoal);
-      color: var(--lime);
-      padding: 0.9rem 2rem;
-      font-size: 0.85rem;
+      padding: 0.875rem 2rem;        /* identical across all variants */
+      font-family: var(--font-sans);
+      font-size: 0.84rem;            /* identical */
       font-weight: 500;
-      letter-spacing: 0.06em;
+      letter-spacing: 0.07em;
       text-transform: uppercase;
       border-radius: 2px;
-      transition: background 0.2s, transform 0.15s;
+      border: 1.5px solid transparent; /* always present, sized identically */
+      line-height: 1;                  /* prevents line-height drift */
+      cursor: pointer;
+      text-decoration: none;
+      vertical-align: middle;
+      box-sizing: border-box;
+      transition: background 0.2s, color 0.2s, border-color 0.2s, transform 0.15s;
     }
-    .btn-dark:hover { background: #111; transform: translateY(-1px); }
+    /* Solid charcoal — primary action */
+    .btn-primary {
+      background: var(--charcoal);
+      color: var(--white);
+      border-color: var(--charcoal);
+    }
+    .btn-primary:hover { background: #111; border-color: #111; transform: translateY(-1px); }
+    /* Ghost — secondary action: same size, transparent fill */
+    .btn-ghost {
+      background: transparent;
+      color: var(--charcoal);
+      border-color: var(--charcoal);
+    }
+    .btn-ghost:hover { background: var(--charcoal); color: var(--cream); }
+    /* Accent — charcoal bg, lime text (dark sections only, AAA contrast) */
+    .btn-dark {
+      background: var(--charcoal);
+      color: var(--lime);
+      border-color: var(--charcoal);
+    }
+    .btn-dark:hover { background: #111; border-color: #111; transform: translateY(-1px); }
 
     /* ─── Nav ────────────────────────────────────────────── */
     nav {
@@ -414,7 +416,8 @@
       flex-wrap: wrap;
       align-items: center;
     }
-    .phil-cta-inline .btn-primary { font-size: 0.8rem; padding: 0.75rem 1.6rem; }
+    .phil-cta-inline { gap: 1rem; }
+    .phil-cta-inline .btn-primary { padding: 0.75rem 1.4rem; }
     .phil-cta-inline .or-text {
       font-size: 0.75rem;
       color: var(--charcoal-mid);
@@ -435,6 +438,18 @@
       border-left: 4px solid var(--lime);
       padding: 2.5rem;
       background: var(--cream);
+    }
+    .phil-image {
+      margin: -2.5rem -2.5rem 2rem -2.5rem;
+      overflow: hidden;
+      max-height: 320px;
+    }
+    .phil-image img {
+      width: 100%;
+      height: 320px;
+      object-fit: cover;
+      object-position: top center;
+      display: block;
     }
     .phil-quote blockquote {
       font-family: var(--font-serif);
@@ -878,12 +893,20 @@
       padding: var(--section-gap) 0;
       background: var(--charcoal);
       color: var(--white);
+    }
+    .cta-card {
+      max-width: 640px;
+      margin: 0 auto;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-top: 4px solid var(--lime);
+      padding: 3rem;
       text-align: center;
     }
-    .contact-cta .section-tag { color: rgba(255,255,255,0.35); opacity: 1; }
-    .contact-cta .section-heading { color: var(--white); margin-bottom: 1rem; }
-    .contact-cta p {
-      max-width: 52ch;
+    .cta-card .section-tag { color: rgba(255,255,255,0.35); opacity: 1; }
+    .cta-card .section-heading { color: var(--white); margin-bottom: 1rem; }
+    .cta-card p {
+      max-width: 48ch;
       margin: 0 auto 2.5rem;
       color: rgba(255,255,255,0.55);
       font-size: 1.02rem;
@@ -974,6 +997,7 @@
       .nav-links.open { display: flex; }
       .nav-links a { font-size: 1rem; }
       .nav-cta { font-size: 0.9rem !important; padding: 0.7rem 1.5rem !important; }
+      .nav-book { font-size: 0.9rem !important; padding: 0.7rem 1.5rem !important; border-color: var(--charcoal) !important; }
 
       /* Hero */
       .hero { grid-template-columns: 1fr; min-height: auto; padding-top: 4.5rem; }
@@ -986,11 +1010,12 @@
       /* Grids */
       .phil-grid,
       .programme-grid { grid-template-columns: 1fr; gap: 3rem; }
+      .phil-image { display: none; }
 
       .wiggle-steps { grid-template-columns: 1fr; gap: 2.5rem; }
       .workshops-grid,
       .writing-grid,
-      .testi-grid { grid-template-columns: 1fr; }
+      .testi-grid { grid-template-columns: 1fr; gap: 1.5rem; }
 
       /* Newsletter */
       .newsletter-form { flex-direction: column; }
@@ -1017,15 +1042,96 @@
     }
 
     @media (max-width: 480px) {
+      .cta-card { padding: 2rem 1.5rem; }
+      .cta-buttons { flex-direction: column; align-items: stretch; }
+      .cta-buttons .btn-primary,
+      .cta-buttons .btn-email { text-align: center; width: 100%; }
       .hero-text { padding: 2.5rem 1.2rem; }
       .container { padding: 0 1.2rem; }
       .section-heading { font-size: clamp(1.8rem, 7vw, 2.5rem); }
-      .btn-ghost { margin-left: 0; margin-top: 0.8rem; }
-      .hero-ctas { display: flex; flex-direction: column; gap: 0.8rem; }
-      .hero-ctas .btn-ghost { margin-left: 0; }
+      .btn-ghost { margin-top: 0; }
+      .hero-ctas { flex-direction: column; align-items: flex-start; gap: 0.75rem; }
+
       .stats-inner { grid-template-columns: 1fr 1fr; gap: 1.5rem; }
       .cta-buttons { flex-direction: column; }
       .phil-cta-inline { flex-direction: column; align-items: flex-start; }
+    }
+
+    /* ─── Nav book pill ──────────────────────────────────── */
+    .nav-book {
+      display: inline-block;
+      border: 1.5px solid var(--charcoal);
+      color: var(--charcoal) !important;
+      padding: 0.4rem 0.9rem;
+      border-radius: 2px;
+      font-weight: 500 !important;
+      font-size: 0.72rem !important;
+      letter-spacing: 0.07em;
+      white-space: nowrap;
+      transition: background 0.2s, color 0.2s !important;
+    }
+    .nav-book:hover { background: var(--charcoal) !important; color: var(--lime) !important; }
+
+    /* ─── Logo strip ─────────────────────────────────────── */
+    .logo-strip {
+      padding: 3.5rem 0;
+      background: var(--white);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+    .logo-strip-label {
+      font-size: 0.68rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--charcoal-mid);
+      opacity: 0.45;
+      text-align: center;
+      display: block;
+      margin-bottom: 2rem;
+    }
+    .logo-strip-inner {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 4rem;
+      flex-wrap: wrap;
+    }
+    .logo-item {
+      display: flex;
+      align-items: center;
+      opacity: 0.45;
+      transition: opacity 0.2s;
+      filter: grayscale(100%);
+    }
+    .logo-item:hover { opacity: 0.75; }
+    .logo-item svg { height: 28px; width: auto; }
+    .logo-item img { height: 28px; width: auto; }
+    .logo-wordmark {
+      font-family: var(--font-serif);
+      font-size: 1.3rem;
+      font-weight: 400;
+      letter-spacing: 0.05em;
+      color: var(--charcoal);
+    }
+    @media (max-width: 600px) {
+      .logo-strip-inner { gap: 2.5rem; }
+    }
+
+    /* ─── Testi card with logo ───────────────────────────── */
+    .testi-card-logo {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      margin-bottom: 1.2rem;
+      opacity: 0.5;
+      filter: grayscale(100%) brightness(2);
+    }
+    .testi-card-logo svg { height: 18px; width: auto; }
+    .testi-card-logo img { height: 18px; width: auto; }
+    .testi-card-logo .logo-wordmark {
+      font-size: 0.9rem;
+      color: var(--white);
+      letter-spacing: 0.08em;
     }
 
     /* ─── Animations ─────────────────────────────────────── */
@@ -1036,6 +1142,13 @@
     .hero-eyebrow { animation: fadeUp 0.7s ease both; }
     .hero-headline { animation: fadeUp 0.7s 0.12s ease both; }
     .hero-body     { animation: fadeUp 0.7s 0.22s ease both; }
+    .hero-ctas {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
     .hero-ctas     { animation: fadeUp 0.7s 0.32s ease both; }
   </style>
 </head>
@@ -1045,7 +1158,7 @@
   <nav aria-label="Main navigation">
     <div class="nav-inner">
       <a href="#" class="nav-logo serif">Isabel Kennedy</a>
-      <button class="nav-hamburger" aria-label="Open menu" onclick="toggleNav()">
+      <button class="nav-hamburger" aria-label="Open navigation menu" aria-expanded="false" aria-controls="nav-links" id="nav-hamburger">
         <span></span><span></span><span></span>
       </button>
       <ul class="nav-links" id="nav-links">
@@ -1055,8 +1168,10 @@
         <li class="nav-hide-tablet"><a href="#testimonials">Clients</a></li>
         <li><a href="#workshops">Workshops</a></li>
         <li class="nav-hide-tablet"><a href="#blog">Writing</a></li>
+        <li><a href="ceramics.html">Ceramics & Tiles</a></li>
         <li><a href="press.html">Press</a></li>
         <li><a href="#contact">Contact</a></li>
+        <li><a href="https://payhip.com/PLACEHOLDER" class="nav-book" target="_blank" rel="noopener">Pre-order: #20daysof</a></li>
         <li><a href="https://calendly.com/isabel-kennedycreativeconsulting/free-connect-isabel-kennedy-creative-consulting-30mins" class="nav-cta" target="_blank" rel="noopener">Book a Free Call</a></li>
       </ul>
     </div>
@@ -1075,7 +1190,7 @@
       <p class="hero-byline">Berlin · London · International · Kennedy Creative Consulting</p>
     </div>
     <div class="hero-image" aria-hidden="true">
-      <img src="isabel-kennedy.jpg" alt="Isabel Kennedy — Creative Coach and Burnout Prevention Specialist" />
+      <img src="isabel-kennedy.jpg" alt="Isabel Kennedy - Creative Coach and Burnout Prevention Specialist" />
     </div>
   </section>
 
@@ -1122,6 +1237,13 @@
           <p style="margin-top:1.5rem; font-size:0.88rem; color:var(--charcoal-mid); opacity:0.6; letter-spacing:0.03em;">Clients have included senior leaders across many of the world's largest pharmaceutical and biotech companies, as well as entrepreneurs, founders, and creatives.</p>
         </div>
         <div class="phil-quote">
+          <div class="phil-image">
+            <img
+              src="isabel-kennedy-2.jpg"
+              alt="Isabel Kennedy - Executive Coach and Ceramics Practitioner London Berlin"
+              onerror="this.parentElement.style.display='none'"
+            />
+          </div>
           <blockquote>"Creativity isn't what you make. It's how you return to yourself. And when you find that — you can go anywhere."</blockquote>
           <cite>— Isabel Kennedy</cite>
         </div>
@@ -1268,11 +1390,17 @@
         </div>
 
         <div class="testi-card">
-          <p class="testi-quote">A couple of hours of 'making room' had this impact — helping us turn talking points into action and results, and develop a deeper understanding of our strengths and ways of working together.</p>
+          <div class="testi-card-logo">
+            <!-- Scripe.io wordmark SVG -->
+            <svg viewBox="0 0 80 22" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Scripe">
+              <text x="0" y="17" font-family="Georgia, serif" font-size="17" fill="white" letter-spacing="1">scripe</text>
+            </svg>
+          </div>
+          <p class="testi-quote">Working with Isabel has been the best! I never imagined that a couple of hours of 'making room' can have this impact. We could grow as a team — and for ourselves — in such meaningful ways. So that now, we can turn this new power into business impact. After the workshop, we had a much deeper understanding of each other — of our strengths, our ways of working and communicating. What we really loved is the creative layer of the workshop and the amazing summary we received afterwards that really made us turn talking points into action and results.</p>
           <div class="testi-author">
-            <span class="testi-name">Co-Founder & CMO</span>
-            <span class="testi-role">Corporate Ceramics Workshop</span>
-            <span class="testi-outcome">Outcome: Team alignment</span>
+            <span class="testi-name">Carmen Jenny</span>
+            <span class="testi-role">Co-Founder & CMO · Scripe.io · Forbes 30u30</span>
+            <span class="testi-outcome">Outcome: Team alignment & business impact</span>
           </div>
         </div>
 
@@ -1294,7 +1422,7 @@
     <div class="container">
       <span class="section-tag">Also available</span>
       <h2 class="section-heading" id="workshops-heading">Workshops & <em>speaking</em></h2>
-      <p style="color:var(--charcoal-mid); max-width:55ch;">Alongside the programme, I run corporate ceramics workshops and speak on creativity in leadership, burnout prevention, and purpose in the age of AI. Clients include Soho House. Available internationally.</p>
+      <p style="color:var(--charcoal-mid); max-width:55ch;">Alongside the coaching programme, I run corporate ceramics workshops using handmade tiles and clay — and speak on creativity in leadership, burnout prevention, and purpose in the age of AI. Clients include Soho House and Scripe.io. Available in Mumbai, London, and internationally.</p>
       <div class="workshops-grid">
         <div class="workshop-card">
           <div class="icon">🏺</div>
@@ -1318,6 +1446,30 @@
       </div>
     </div>
   </section>
+
+
+  <!-- ─── Client Logo Strip ────────────────────────────────── -->
+  <div class="logo-strip" aria-label="Clients and venues">
+    <div class="container">
+      <span class="logo-strip-label">Clients &amp; venues include</span>
+      <div class="logo-strip-inner">
+
+        <!-- Soho House -->
+        <div class="logo-item" title="Soho House">
+          <span class="logo-wordmark" style="font-family:'Cormorant Garamond',Georgia,serif; font-size:1.2rem; letter-spacing:0.12em; color:var(--charcoal); font-weight:400;">SOHO HOUSE</span>
+        </div>
+
+        <!-- Scripe.io -->
+        <div class="logo-item" title="Scripe.io">
+          <svg viewBox="0 0 90 26" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Scripe.io">
+            <text x="0" y="20" font-family="Georgia, serif" font-size="20" fill="#333333" letter-spacing="2">scripe</text>
+            <text x="66" y="20" font-family="Georgia, serif" font-size="12" fill="#333333">.io</text>
+          </svg>
+        </div>
+
+      </div>
+    </div>
+  </div>
 
   <!-- ─── Writing ──────────────────────────────────────────── -->
   <section class="writing" id="blog" aria-labelledby="writing-heading">
@@ -1371,13 +1523,15 @@
   <!-- ─── CTA Banner ───────────────────────────────────────── -->
   <section class="contact-cta" id="contact" aria-labelledby="contact-heading">
     <div class="container">
-      <span class="section-tag">Let's talk</span>
-      <h2 class="section-heading" id="contact-heading">Ready to choose your path before it's chosen for you?</h2>
-      <p>I offer a free 30-minute discovery call to see if we're a good fit. No pressure, no script — just a real conversation about where you are and where you want to be.</p>
-      <div class="cta-buttons">
-        <a href="https://calendly.com/isabel-kennedycreativeconsulting/free-connect-isabel-kennedy-creative-consulting-30mins" class="btn-primary" target="_blank" rel="noopener">Book Your Free Discovery Call</a>
-        <span class="cta-divider">or</span>
-        <a href="mailto:Isabel@kennedycreativeconsulting.com?subject=General%20Inquiry&body=Hi%20Isabel%2C%0A%0AI%27d%20love%20to%20connect%20with%20you.%0A%0AIf%20it%27s%20helpful%2C%20you%20can%20also%20book%20a%2030-minute%20call%20directly%3A%20https%3A//calendly.com/isabel-kennedycreativeconsulting/free-connect-isabel-kennedy-creative-consulting-30mins%0A%0A" class="btn-email">Send an email →</a>
+      <div class="cta-card">
+        <span class="section-tag">Let's talk</span>
+        <h2 class="section-heading" id="contact-heading">Ready to choose your path before it's chosen for you?</h2>
+        <p>I offer a free 30-minute discovery call to see if we're a good fit. No pressure, no script — just a real conversation about where you are and where you want to be.</p>
+        <div class="cta-buttons">
+          <a href="https://calendly.com/isabel-kennedycreativeconsulting/free-connect-isabel-kennedy-creative-consulting-30mins" class="btn-primary" target="_blank" rel="noopener">Book Your Free Discovery Call</a>
+          <span class="cta-divider">or</span>
+          <a href="mailto:Isabel@kennedycreativeconsulting.com?subject=General%20Inquiry&body=Hi%20Isabel%2C%0A%0AI%27d%20love%20to%20connect%20with%20you.%0A%0AIf%20it%27s%20helpful%2C%20you%20can%20also%20book%20a%2030-minute%20call%20directly%3A%20https%3A//calendly.com/isabel-kennedycreativeconsulting/free-connect-isabel-kennedy-creative-consulting-30mins%0A%0A" class="btn-email">Send an email →</a>
+        </div>
       </div>
     </div>
   </section>
@@ -1389,9 +1543,11 @@
         <span class="footer-logo serif">Isabel Kennedy</span>
         <ul class="footer-links">
           <li><a href="https://kennedycreativeconsulting.com" target="_blank" rel="noopener">Kennedy Creative Consulting</a></li>
+          <li><a href="ceramics.html">Ceramics &amp; Tiles</a></li>
           <li><a href="https://fishyceramics.com" target="_blank" rel="noopener">Fishy Ceramics</a></li>
           <li><a href="https://www.linkedin.com/in/isabel--kennedy/" target="_blank" rel="noopener">LinkedIn</a></li>
-          <li><a href="press.html">Press</a></li>
+          <li><a href="ceramics.html">Ceramics & Tiles</a></li>
+        <li><a href="press.html">Press</a></li>
           <li><a href="#newsletter">Newsletter</a></li>
           <li><a href="mailto:Isabel@kennedycreativeconsulting.com?subject=General%20Inquiry&body=Hi%20Isabel%2C%0A%0AI%27d%20love%20to%20connect%20with%20you.%0A%0AIf%20it%27s%20helpful%2C%20you%20can%20also%20book%20a%2030-minute%20call%20directly%3A%20https%3A//calendly.com/isabel-kennedycreativeconsulting/free-connect-isabel-kennedy-creative-consulting-30mins%0A%0A">Contact</a></li>
         </ul>
@@ -1402,14 +1558,23 @@
 
   <script>
     // ─── Mobile nav toggle ───────────────────────────────────
-    function toggleNav() {
-      const nav = document.getElementById('nav-links');
-      nav.classList.toggle('open');
-    }
-    // Close nav when a link is clicked
-    document.querySelectorAll('#nav-links a').forEach(link => {
-      link.addEventListener('click', () => {
-        document.getElementById('nav-links').classList.remove('open');
+    document.addEventListener('DOMContentLoaded', function () {
+      const hamburger = document.getElementById('nav-hamburger');
+      const nav       = document.getElementById('nav-links');
+
+      hamburger.addEventListener('click', function () {
+        const isOpen = nav.classList.toggle('open');
+        hamburger.setAttribute('aria-expanded', isOpen);
+        hamburger.setAttribute('aria-label', isOpen ? 'Close navigation menu' : 'Open navigation menu');
+      });
+
+      // Close nav when any link is clicked
+      nav.querySelectorAll('a').forEach(function (link) {
+        link.addEventListener('click', function () {
+          nav.classList.remove('open');
+          hamburger.setAttribute('aria-expanded', 'false');
+          hamburger.setAttribute('aria-label', 'Open navigation menu');
+        });
       });
     });
 
