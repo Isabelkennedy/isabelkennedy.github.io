@@ -978,15 +978,15 @@
       .nav-links .nav-hide-tablet { display: none; }
     }
 
-    @media (max-width: 900px) {
+    @media (max-width: 1024px) {
       :root { --section-gap: 5rem; }
 
-      /* Nav */
+      /* Nav — hamburger visible on iPad and mobile */
       .nav-hamburger { display: flex; }
       .nav-links {
         display: none;
         position: fixed;
-        top: 60px; left: 0; right: 0;
+        top: 61px; left: 0; right: 0;
         background: rgba(250,247,242,0.99);
         flex-direction: column;
         padding: 2rem;
@@ -1563,29 +1563,28 @@
 
   <script>
     // ─── Mobile nav toggle ───────────────────────────────────
-    document.addEventListener('DOMContentLoaded', function () {
-      const hamburger = document.getElementById('nav-hamburger');
-      const nav       = document.getElementById('nav-links');
+    // Runs immediately — button is already in DOM at this point (script at bottom)
+    (function () {
+      var hamburger = document.getElementById('nav-hamburger');
+      var navLinks  = document.getElementById('nav-links');
+
+      if (!hamburger || !navLinks) return; // safety guard
 
       hamburger.addEventListener('click', function () {
-        const isOpen = nav.classList.toggle('open');
-        hamburger.setAttribute('aria-expanded', isOpen);
+        var isOpen = navLinks.classList.toggle('open');
+        hamburger.setAttribute('aria-expanded', String(isOpen));
         hamburger.setAttribute('aria-label', isOpen ? 'Close navigation menu' : 'Open navigation menu');
       });
 
-      // Close nav when any link is clicked
-      nav.querySelectorAll('a').forEach(function (link) {
+      navLinks.querySelectorAll('a').forEach(function (link) {
         link.addEventListener('click', function () {
-          nav.classList.remove('open');
+          navLinks.classList.remove('open');
           hamburger.setAttribute('aria-expanded', 'false');
           hamburger.setAttribute('aria-label', 'Open navigation menu');
         });
       });
-    });
+    }());
+  </script>
 
-    // ─── Brevo form scripts ───────────────────────────────────
-    window.REQUIRED_CODE_ERROR_MESSAGE = 'Please choose a country code';
-    window.LOCALE = 'en';
-    window.EMAIL_INVALID_MESSAGE = "The information provided is invalid. Please review the field format and try again.";
-    window.REQUIRED_ERROR_MESSAGE = "This field cannot be left blank.";
-    win
+</body>
+</html>
