@@ -45,7 +45,7 @@
 
     /* ── Nav ───────────────────────────────────────────────── */
     nav {
-      position: fixed; top: 0; left: 0; right: 0; z-index: 200;
+      position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
       display: flex; align-items: center; justify-content: space-between;
       padding: 1.4rem 2.5rem;
       mix-blend-mode: normal;
@@ -103,7 +103,8 @@
       border: none;
       cursor: pointer;
       padding: 4px;
-      z-index: 201;
+      z-index: 10000;
+      position: relative;
     }
     .nav-hamburger span {
       display: block; width: 22px; height: 1.5px;
@@ -558,11 +559,32 @@
 
     /* ── Mobile ─────────────────────────────────────────────── */
     @media (max-width: 1024px) {
-      .nav-links { display: none; flex-direction: column; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: var(--ink); padding: 6rem 2.5rem 3rem; gap: 2rem; z-index: 200; }
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        position: fixed;
+        top: 0; left: 0; right: 0; bottom: 0;
+        background: var(--ink);
+        padding: 6rem 2.5rem 3rem;
+        gap: 2rem;
+        z-index: 9999;
+        overflow-y: auto;
+      }
       .nav-links.open { display: flex; }
-      .nav-links a { font-size: 1.2rem; color: rgba(253,248,242,0.7); letter-spacing: 0.08em; }
+      .nav-links a {
+        font-size: 1.3rem;
+        color: rgba(253,248,242,0.75);
+        letter-spacing: 0.06em;
+        text-shadow: none;
+        display: block;
+        padding: 0.5rem 0;
+        border-bottom: 1px solid rgba(255,255,255,0.07);
+      }
+      .nav-links a:hover { color: var(--lime); }
       .nav-touch { display: none; }
-      .nav-hamburger { display: flex; }
+      .nav-hamburger { display: flex; z-index: 10000; position: relative; }
+      .nav-hamburger span { background: var(--paper) !important; }
+      nav.scrolled .nav-hamburger span { background: var(--ink) !important; }
       .wiggle-body { grid-template-columns: 1fr; gap: 2.5rem; }
       .doors-inner { grid-template-columns: 1fr; gap: 4rem; }
       .door-divider { display: none; }
