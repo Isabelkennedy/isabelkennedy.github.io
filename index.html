@@ -124,7 +124,7 @@
       position: absolute; inset: 0;
       width: 100%; height: 100%;
       object-fit: cover;
-      object-position: center top;
+      object-position: center 15%;
     }
     .hero-img-placeholder {
       position: absolute; inset: 0;
@@ -564,23 +564,26 @@
         flex-direction: column;
         position: fixed;
         top: 0; left: 0; right: 0; bottom: 0;
-        background: var(--ink);
-        padding: 6rem 2.5rem 3rem;
-        gap: 2rem;
+        background: #1f1c19;
+        padding: 5rem 0 3rem;
+        gap: 0;
         z-index: 9999;
         overflow-y: auto;
       }
       .nav-links.open { display: flex; }
+      .nav-links li { width: 100%; }
       .nav-links a {
-        font-size: 1.3rem;
-        color: rgba(253,248,242,0.75);
+        font-size: 1.1rem;
+        color: rgba(253,248,242,0.8);
         letter-spacing: 0.06em;
-        text-shadow: none;
+        text-shadow: none !important;
         display: block;
-        padding: 0.5rem 0;
-        border-bottom: 1px solid rgba(255,255,255,0.07);
+        padding: 1.1rem 2.5rem;
+        background: #1f1c19;
+        border-bottom: 1px solid rgba(255,255,255,0.06);
+        width: 100%;
       }
-      .nav-links a:hover { color: var(--lime); }
+      .nav-links a:hover, .nav-links a:active { color: var(--lime); background: #2a2622; }
       .nav-touch { display: none; }
       .nav-hamburger { display: flex; z-index: 10000; position: relative; }
       .nav-hamburger span { background: var(--paper) !important; }
@@ -620,6 +623,7 @@
         <li><a href="#clay">Clay & Wellness</a></li>
         <li><a href="ceramics.html">Ceramics</a></li>
         <li><a href="press.html">Press</a></li>
+        <li><a href="purpose-ceramics.html">Writing</a></li>
         <li><a href="mailto:Isabel@kennedycreativeconsulting.com?subject=Register%20Interest%20%E2%80%94%20%2320daysof&body=Hi%20Isabel%2C%0A%0AI%27d%20love%20to%20hear%20when%20%2320daysof%20is%20available.%0A%0A">#20daysof</a></li>
       </ul>
       <a href="mailto:Isabel@kennedycreativeconsulting.com" class="nav-touch">Get in touch</a>
@@ -698,6 +702,8 @@
     <p>Available for individuals, small groups, and teams. Facilitated by Isabel — ceramicist, coach, and clay wellness practitioner.</p>
   </section>
 
+  <p style="text-align:center; padding:0 2.5rem 5rem; font-size:0.78rem; color:var(--dust);">Enjoyed working together? <a href="https://buymeacoffee.com/isabelkennedy" target="_blank" rel="noopener" style="color:var(--warm); border-bottom:1px solid var(--lime); padding-bottom:1px;">Buy me a coffee →</a></p>
+
   <!-- Second image -->
   <div>
     <img class="full-img" src="fishy-ceramics-work.jpg" alt="Fishy Ceramics — handmade ceramic work by Isabel Kennedy"
@@ -762,15 +768,18 @@
       <div>
         <span class="texture-label">Fishy Ceramics</span>
         <h3>Handmade lamps and bespoke tiles.</h3>
-        <p>The creative practice — Flowers and Fishy lamp series made at Studio Pottery London. Bespoke tile commissions designed around one person's energy. The making and the coaching come from the same place.</p>
+        <p>The creative practice — Flowers and Fishy lamp series made at Studio Pottery London. Bespoke tile commissions designed around one person's energy — star signs, numerology, the objects that matter. The making and the coaching come from the same place.</p>
         <a href="ceramics.html" class="t-link">See the work →</a>
       </div>
       <div class="texture-divider"></div>
       <div>
-        <span class="texture-label">Writing</span>
+        <span class="texture-label">Writing · A book in progress</span>
         <h3>#20daysof</h3>
-        <p>Presence. Noticing. Persistence. Performance. What happens when you show up for twenty days in a row.</p>
-        <a href="mailto:Isabel@kennedycreativeconsulting.com?subject=Register%20Interest%20%E2%80%94%20%2320daysof&body=Hi%20Isabel%2C%0A%0AI%27d%20love%20to%20hear%20when%20%2320daysof%20is%20available.%0A%0A" class="t-link">Register interest →</a>
+        <p>Presence. Noticing. Persistence. Performance. What happens when you show up for twenty days in a row. Currently being written.</p>
+        <div style="display:flex; flex-direction:column; gap:0.8rem; margin-top:1.2rem;">
+          <a href="mailto:Isabel@kennedycreativeconsulting.com?subject=Publishing%20Inquiry%20%E2%80%94%20%2320daysof&body=Hi%20Isabel%2C%0A%0AI%27m%20interested%20in%20discussing%20publishing%20%2320daysof.%0A%0A" class="t-link">Interested in publishing? Get in touch →</a>
+          <a href="https://buymeacoffee.com/isabelkennedy" target="_blank" rel="noopener" class="t-link" style="border-bottom-color: rgba(201,191,176,0.3);">Support the writing →</a>
+        </div>
       </div>
     </div>
   </div>
@@ -781,6 +790,7 @@
     <h2>The right collaboration<br>starts with a conversation.</h2>
     <a href="mailto:Isabel@kennedycreativeconsulting.com" class="contact-email">Isabel@kennedycreativeconsulting.com</a>
     <p class="contact-note">London · Berlin</p>
+    <p style="margin-top:2.5rem; font-size:0.75rem; color:var(--dust); letter-spacing:0.04em;">Worked together and want to support the work? <a href="https://buymeacoffee.com/isabelkennedy" target="_blank" rel="noopener" style="color:var(--warm); border-bottom:1px solid var(--lime); padding-bottom:1px;">Buy me a coffee →</a></p>
   </section>
 
   <!-- Footer -->
@@ -792,6 +802,7 @@
       <li><a href="purpose-ceramics.html">Writing</a></li>
       <li><a href="https://fishyceramics.com" target="_blank" rel="noopener">Fishy Ceramics</a></li>
       <li><a href="https://www.linkedin.com/in/isabel--kennedy/" target="_blank" rel="noopener">LinkedIn</a></li>
+      <li><a href="https://buymeacoffee.com/isabelkennedy" target="_blank" rel="noopener">Buy me a coffee</a></li>
     </ul>
     <span class="f-copy">© 2026 Isabel Kennedy · Kennedy Creative Consulting</span>
   </footer>
